@@ -1,77 +1,106 @@
+:root {
+    --dark-green: #0A3323;     /* Əsas mətnlər, başlıqlar və ciddi vurğular üçün */
+    --moss-green: #839958;     /* Tarixlər və ikinci dərəcəli incə yazılar üçün */
+    --beige: #F7F4D5;          /* Saytın o yumşaq, əsas FON rəngi */
+    --rosy-brown: #D3968C;     /* "Devamını Oku" düyməsi və linklər üçün (O estetik çəhrayı-qəhvəyi ton) */
+    --midnight-green: #105666; /* Hover effektləri və ya alternativ link rəngləri üçün */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Georgia, serif; /* Blog üçün daha estetik bir şrift */
+}
+
+body {
+    background-color: var(--beige);
+    color: var(--dark-green); /* Yazılar tünd yaşıl olmalıdır ki, bej üzərində rahat oxunsun */
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 700px; /* Daha dar və oxunaqlı bir blog strukturu */
+    margin: 0 auto;
+}
+
+/* Başlıq Hissəsi */
 .blog-header {
     text-align: center;
-    padding: 60px 0 40px 0;
+    padding: 40px 0 60px 0;
+    border-bottom: 1px solid rgba(131, 153, 88, 0.3); /* Moss green ilə incə bir xətt */
 }
 
 .blog-header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--dark-green);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: 400;
 }
 
 .blog-header .subtitle {
     color: var(--moss-green);
     font-style: italic;
-    margin-top: 10px;
-    font-size: 1.1rem;
+    margin-top: 8px;
+    font-size: 1rem;
 }
 
+/* Yazı Siyahısı */
 .blog-posts {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
+/* Kartlar - Bayaq sən bəyənmədiyin o tünd fonu silib, yerinə təmiz minimalist stil verdim */
 .post-card {
-    background-color: var(--dark-green);
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(10, 51, 35, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.post-card:hover {
-    transform: translateY(-3px);
+    background: transparent; /* Fon olmasın, bej üzərində birbaşa yazı kimi dursun */
+    padding: 0;
+    margin-bottom: 50px;
 }
 
 .post-date {
-    color: var(--rosy-brown);
-    font-size: 0.9rem;
+    color: var(--rosy-brown); /* Tarix o gözəl çəhrayı tonda */
+    font-size: 0.85rem;
     display: block;
-    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
 }
 
 .post-card h2 {
-    color: var(--text-light);
+    color: var(--dark-green); /* Başlıqlar tünd yaşıl */
     font-size: 1.6rem;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 500;
 }
 
 .post-card p {
-    color: rgba(247, 244, 213, 0.85); 
-    margin-bottom: 20px;
+    color: rgba(10, 51, 35, 0.85); /* Tünd yaşılın bir az yumşaldılmış variantı (oxunuş üçün əla) */
+    font-size: 1.05rem;
+    margin-bottom: 15px;
 }
 
+/* Linklər və Düymələr */
 .read-more {
     display: inline-block;
-    color: var(--text-dark);
-    background-color: var(--rosy-brown);
-    padding: 8px 20px;
+    color: var(--dark-green);
     text-decoration: none;
-    border-radius: 20px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    border-bottom: 2px solid var(--rosy-brown); /* Altında incə çəhrayı xətt */
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
 }
 
 .read-more:hover {
-    background-color: #c4857b; 
+    color: var(--midnight-green);
+    border-bottom-color: var(--midnight-green);
 }
 
 .blog-footer {
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0 20px 0;
     color: var(--moss-green);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(131, 153, 88, 0.2);
 }
