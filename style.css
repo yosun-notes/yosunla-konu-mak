@@ -1,0 +1,77 @@
+.blog-header {
+    text-align: center;
+    padding: 60px 0 40px 0;
+}
+
+.blog-header h1 {
+    font-size: 3rem;
+    color: var(--dark-green);
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.blog-header .subtitle {
+    color: var(--moss-green);
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.blog-posts {
+    margin-top: 40px;
+}
+
+.post-card {
+    background-color: var(--dark-green);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(10, 51, 35, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+}
+
+.post-date {
+    color: var(--rosy-brown);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.post-card h2 {
+    color: var(--text-light);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.post-card p {
+    color: rgba(247, 244, 213, 0.85); 
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--text-dark);
+    background-color: var(--rosy-brown);
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #c4857b; 
+}
+
+.blog-footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--moss-green);
+    font-size: 0.9rem;
+}
